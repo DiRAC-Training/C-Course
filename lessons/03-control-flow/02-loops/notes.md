@@ -1,4 +1,22 @@
-## Exercise 1
+# Loops
+
+## `for`
+
+Ususally use a counter and some termination criterion to stop iterating.
+
+Most commonly used to iterate a known number of times.
+
+Syntax:
+
+```c
+for ( <init> ; <cond> ; <expr> ) {
+    <body>
+}
+```
+
+<explain syntax and when stuff is evaluated> AS LONG AS THE CRITERION IS TRUE
+
+### Exercise 1
 
 `for`
 
@@ -40,7 +58,21 @@ int main(void) {
 }
 ```
 
-## Exercise 2
+## `while`
+
+Most commonly used when number of iterations not known, but want to iterate as long as some condition is true.
+
+Syntax:
+
+```c
+while ( <cond> ) {
+    <body>
+}
+```
+
+Note that loop must update <cond> manually. Forgetting this leads to infinite loop.
+
+### Exercise 2
 
 Implement the same code using a `while` loop:
 
@@ -82,7 +114,22 @@ int main(void) {
 }
 ```
 
-## Exercise 3
+## `do-while`
+
+Similar to `while`, but the condition is checked at the end of each iteration. So will always get at
+least 1 iteration.
+
+Syntax:
+
+```c
+do {
+    <body>
+} while( <cond> );
+```
+
+Still have to update <cond> within loop body.
+
+### Exercise 3
 
 Use a `do-while` loop to calculate the number of times a given character `target` appears in a string:
 

@@ -1,6 +1,14 @@
-## Exercise 1
+# Jumps
 
-`break`
+Jumps cause discontinuous changes in the control flow of a program, causing program execution to
+literally jump to a different line altogether.
+
+## `break`
+
+Used to terminate the innermost loop. Used e.g. to stop iterating as soon as we find a solution. The
+loop is exited immediately regardless of the loop termination criterion.
+
+### Exercise 1
 
 Use a `break` statement to find the first position at which a given character `target` appears in a
 string. If `target` does not appear in a string, set the result to be `-1`. Store the result in the
@@ -51,9 +59,11 @@ int main(void) {
 }
 ```
 
-## Exercise 2
+## `continue`
 
-`continue`
+Used to jump to the end of (skip) the current iteration of the innermost loop.
+
+### Exercise 2
 
 Write a loop to sum the values in an array, using a `continue` statement to only add up positive values:
 
@@ -88,9 +98,23 @@ int main(void) {
 }
 ```
 
-## Exercise 3
+## `goto`
 
-`goto`
+Used to jump directly to a given named block and continue execution from there. Can be used to escape
+multiple nested loops, or go straight to clean-up code if an error occurs.
+
+Should be used with caution, as it can easily lead to difficult-to-follow control flow and subtle bugs.
+
+Syntax:
+
+```c
+goto my_label;
+...
+my_label:
+    // goto my_label will jump here unconditionally.
+```
+
+### Exercise 3
 
 Write a loop to check whether an array is sorted in ascending order, using a `goto` to jump the
 appropriate `printf` statement if you find that the list is not sorted. What is missing to ensure
