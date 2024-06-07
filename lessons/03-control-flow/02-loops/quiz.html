@@ -1,0 +1,89 @@
+<h2 id="loops">Loops</h2>
+<p>Which statement describes the usual purpose of a <code>for</code>
+loop?</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />To repeat infinitely many
+times</label></li>
+<li><label><input type="checkbox" />To repeat as long as a condition is
+true</label></li>
+<li><label><input type="checkbox" />To repeat a fixed number of
+times</label></li>
+</ul>
+<p>A: Although a <code>for</code> loop can be used to implement all of
+these, the most usual purpose is to repeat a fixed number of times.</p>
+<hr />
+<p>Which statement describes the usual purpose of a <code>while</code>
+loop?</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />To repeat infinitely many
+times</label></li>
+<li><label><input type="checkbox" />To repeat as long as a condition is
+true</label></li>
+<li><label><input type="checkbox" />To repeat a fixed number of
+times</label></li>
+</ul>
+<p>A: Although a <code>while</code> loop can be used to implement all of
+these, the most usual purpose is to repeat as long as a condition is
+true.</p>
+<hr />
+<p>A <code>for</code> loop has the following syntax:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span> <span class="op">&lt;</span>init<span class="op">&gt;</span> <span class="op">;</span> <span class="op">&lt;</span>cond<span class="op">&gt;</span> <span class="op">;</span> <span class="op">&lt;</span>expr<span class="op">&gt;</span> <span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Where <code>&lt;init&gt;</code> is the initialisation code which runs
+before the loop starts, <code>&lt;cond&gt;</code> is a logical condition
+and <code>&lt;expr&gt;</code> is an expression run at the end of each
+loop iteration.</p>
+<p>When is <code>&lt;cond&gt;</code> evaluated?</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />At the end of a loop iteration,
+before <code>&lt;expr&gt;</code></label></li>
+<li><label><input type="checkbox" />At the end of a loop iteration,
+after <code>&lt;expr&gt;</code></label></li>
+<li><label><input type="checkbox" />Before each loop
+iteration</label></li>
+</ul>
+<p>A: Before each loop iteration. If the result is false, the loop is
+exited immediately.</p>
+<hr />
+<p>Consider this <code>for</code> loop:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i<span class="op">=</span><span class="dv">0</span><span class="op">;</span> i<span class="op">&lt;</span><span class="dv">10</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>How many times will this loop run?</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />0</label></li>
+<li><label><input type="checkbox" />10</label></li>
+<li><label><input type="checkbox" />9</label></li>
+<li><label><input type="checkbox" />1</label></li>
+</ul>
+<p>A: 10 times, since <code>i</code> takes on the values <code>0</code>
+to <code>9</code> (inclusive). The loop terminates when <code>i</code>
+is incremented to <code>10</code> and the condition
+<code>i &lt; 10</code> no longer holds.</p>
+<hr />
+<p>The <code>while</code> and <code>do-while</code> loops have the
+following syntax:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// while:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span> <span class="op">&lt;</span>cond<span class="op">&gt;</span> <span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">// do-while:</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span> <span class="op">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>body<span class="op">&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">while</span><span class="op">(</span> <span class="op">&lt;</span>cond<span class="op">&gt;</span> <span class="op">);</span></span></code></pre></div>
+<p>What is the difference between a <code>while</code> and a
+<code>do-while</code> loop?</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />They’re the same.</label></li>
+<li><label><input type="checkbox" />A <code>while</code> loop runs
+infinitely many times, while a <code>do-while</code> loop runs a fixed
+number of times.</label></li>
+<li><label><input type="checkbox" />A <code>do-while</code> loop always
+runs at least once, but a <code>while</code> loop may not run at
+all.</label></li>
+</ul>
+<p>A: A <code>do-while</code> loop always runs at least once, but a
+<code>while</code> will never run if <code>&lt;cond&gt;</code> is
+initially false.</p>
