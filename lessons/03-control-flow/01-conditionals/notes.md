@@ -11,7 +11,7 @@ true if both `A` and `B` are true, and is false otherwise.
 
 | Operator | Name | Meaning |
 |:-:|:-:|:-:|
-| `a || b` | `OR`  | True if at least one input is true, false otherwise. |
+| `a \|\| b` | `OR`  | True if at least one input is true, false otherwise. |
 | `a && b` | `AND`  | True if all inputs are true, false otherwise. |
 | `!a` | `NOT`  | True if `a` is false, and vice versa. |
 
